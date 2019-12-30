@@ -75,12 +75,8 @@ def runner
   # code runner here
   welcome
   initial_round
-  
-  # deal_card
-  # display_card_total
-  # prompt_user
-  # get_user_input
-  # end_game
-  # initial_round
+  hit?
+  display_card_total
+  end_game
 end
     
