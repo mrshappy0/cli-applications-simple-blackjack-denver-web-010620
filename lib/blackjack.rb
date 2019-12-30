@@ -47,23 +47,18 @@ def hit?(card_total)
   # code hit? here
   prompt_user
   input = get_user_input
-  running_sum = card_total
   
-  while input != 's' do
-    # if input !='h' 
-    #   invalid_command
-    #   prompt_user
-    #   input = get_user_input
-    # end
+  while input != 's' && input != 'h' do
+    invalid_command
+    prompt_user
+    input = get_user_input
+  end 
+  if input == 'h'
     new_card = deal_card
     card_total += new_card
     card_total
-    prompt_user
-    input = get_user_input
-  end
-  card_total
-  if input == 's'
-    card_total 
+  elsif input == 's'
+    card_total
   end 
 end
 
@@ -78,6 +73,9 @@ end
 
 def runner
   # code runner here
+  welcome
+  initial_round
+  
   # deal_card
   # display_card_total
   # prompt_user
