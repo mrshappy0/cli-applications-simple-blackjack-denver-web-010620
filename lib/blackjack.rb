@@ -29,7 +29,7 @@ end
 
 def end_game(card_total)
   # code #end_game here
-  if card_total > 11
+  if card_total >= 21
     puts "Sorry, you hit #{card_total}. Thanks for playing!"
   end
 end
@@ -74,13 +74,9 @@ end
 def runner
   # code runner here
   welcome
-  initial_round
-  
-  # deal_card
-  # display_card_total
-  # prompt_user
-  # get_user_input
-  # end_game
-  # initial_round
+  total = initial_round
+  final_total = hit?(total)
+  display_card_total(final_total)
+  end_game(final_total)
 end
     
